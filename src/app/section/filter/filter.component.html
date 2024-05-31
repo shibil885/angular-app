@@ -1,0 +1,19 @@
+<div class="container text-white mb-9">
+    <div class="row">
+        <h1 class="font-bold">Filter</h1>
+        <div class="d-flex justify-content-evenly">
+            <div>
+            <input type="radio" name="filter" value="all" [(ngModel)]="selectedInput" (change)="changedInput()">
+            <span>All Products: {{totalProduct}}</span>
+            </div>
+            <div>
+            <input type="radio" name="filter" value="true" [(ngModel)]="selectedInput" (change)="changedInput()">
+            <span class="text-green-600">In Stock: {{inStock}}</span>
+            </div>
+            <div>
+            <input type="radio" name="filter" value="false" [(ngModel)]="selectedInput" (change)="changedInput()">
+            <span class="text-red-600">Out of stock: {{outOfStock}}</span>
+            </div>
+        </div>
+    </div>
+</div>

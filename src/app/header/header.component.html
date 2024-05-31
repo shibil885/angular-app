@@ -1,0 +1,16 @@
+<header class="header sticky">
+    <div class="container">
+        <div class="logo">
+            <a href="#"><b class="text-danger">F</b>-App</a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li *ngFor="let menu of headerMenu" class="nav-item"><a href="">{{menu}}</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </div>
+</header>

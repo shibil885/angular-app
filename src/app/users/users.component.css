@@ -1,0 +1,12 @@
+.user {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px 0;
+  }
+  .user h2 {
+    margin: 0 0 8px 0;
+  }
+  .user p {
+    margin: 4px 0;
+  }
+  

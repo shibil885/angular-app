@@ -1,0 +1,8 @@
+<div *ngFor="let user of users" class="user text-white  ">
+    <h2>{{ user.name }}</h2>
+    <p>Email: {{ user.email }}</p>
+    <p>Age: {{ user.age }}</p>
+    <p>Address: {{ user.address }}</p>
+    <p>Joined Date: {{ user.joinedDate | date  }}</p> 
+  </div>
+  
