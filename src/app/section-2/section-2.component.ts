@@ -13,3 +13,4 @@ export class Section2Component {
     this.text = event.target.value
   }
 }
+    
