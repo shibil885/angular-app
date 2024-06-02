@@ -1,6 +1,6 @@
-
-import { Component, Input, EventEmitter, Output } from '@angular/core';
-import { FormsModule,  } from '@angular/forms';
+import { Component, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -11,15 +11,19 @@ import { FormsModule,  } from '@angular/forms';
 })
 export class FilterComponent {
   @Input()
-  totalProduct:number= 0
+  allProduct:number 
+
   @Input()
-  inStock:number = 0
-  @Input() 
-  outOfStock:number = 0
+  inStock:number
+
+  @Input()
+  outOfStock:number
+
+  selectedRadio:string = 'all'
+
   @Output()
-  eventOninputChange: EventEmitter<string> = new EventEmitter<string>()
-  selectedInput:string = 'all'
-  changedInput(){
-    this.eventOninputChange.emit(this.selectedInput)
+  radioChangedEvent:EventEmitter<string> = new EventEmitter<string>()
+  changeRadio(){
+    this.radioChangedEvent.emit(this.selectedRadio)
   }
 }

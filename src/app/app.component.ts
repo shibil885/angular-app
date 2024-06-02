@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SectionComponent } from './section/section.component';
 import { Section2Component } from './section-2/section-2.component';
 import { UsersComponent } from './users/users.component';
+import { SearchComponent } from './section/search/search.component';
 
 @Component({
   selector: 'app-root',
@@ -15,4 +16,5 @@ import { UsersComponent } from './users/users.component';
 })
 export class AppComponent {
   title = 'f-app';
+
 }

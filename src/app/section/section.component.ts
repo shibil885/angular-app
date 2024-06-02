@@ -1,12 +1,13 @@
-import { NgForOf, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, NgForOf, NgIf } from '@angular/common';
+import { Component,Input } from '@angular/core';
+import { ProductsComponent } from './products/products.component';
 import { FilterComponent } from './filter/filter.component';
-import { validateHeaderName } from 'http';
+import { SearchComponent } from './search/search.component';
 
 @Component({
   selector: 'app-section',
   standalone: true,
-  imports: [NgForOf,FilterComponent,NgIf],
+  imports: [NgForOf,NgIf,ProductsComponent,FilterComponent,CommonModule,SearchComponent],
   templateUrl: './section.component.html',
   styleUrl: './section.component.css',
 })
@@ -83,13 +84,17 @@ export class SectionComponent {
       price: "$79.99"
     }
   ]
-  totalCount = this.sportsItems.length
-  outOfStockCount = this.sportsItems.filter(item => item.stock <= 0).length
-  inStockCount = this.sportsItems.filter(item => item.stock > 0).length
-  selectedInput:string = 'all'
-  changedInputParent(value:any){
-    console.log('fro pa',this.selectedInput);
-    
-    this.selectedInput = value
+  countOfAll:number = this.sportsItems.length
+  inStock:number = this.sportsItems.filter((item => item.stock>0)).length
+  outOfStock:number = this.sportsItems.filter((item => item.stock <= 0)).length
+
+  selectedRadio:string = 'all'
+  @Input()
+  searchText:string = ''
+  getSearchText(value:string){
+    this.searchText = value
+  }
+  changedSelectedRadio(event:string){
+    this.selectedRadio = event   
   }
 }

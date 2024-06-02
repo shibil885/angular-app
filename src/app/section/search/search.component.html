@@ -1,0 +1,16 @@
+<div class="container ml-96 mt-10">
+    <div class="roe">
+        <div class="search-container">
+            <div class="searchform">
+                <div class="input-group">
+                    <input list="search_terms" type="text" class="form-control" placeholder="Search term" #searchTextInput>
+                    <div class="input-group-append ms-4">
+                        <button class="input-group-text" (click)="searchItem(searchTextInput)">Search <i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-white" *ngIf="searchText !=''"><strong class="text-white-700">search result for: </strong>"{{searchText}}"</p> 
+</div>
+

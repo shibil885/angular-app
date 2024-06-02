@@ -1,19 +1,22 @@
-<div class="container text-white mb-9">
-    <div class="row">
-        <h1 class="font-bold">Filter</h1>
-        <div class="d-flex justify-content-evenly">
-            <div>
-            <input type="radio" name="filter" value="all" [(ngModel)]="selectedInput" (change)="changedInput()">
-            <span>All Products: {{totalProduct}}</span>
-            </div>
-            <div>
-            <input type="radio" name="filter" value="true" [(ngModel)]="selectedInput" (change)="changedInput()">
-            <span class="text-green-600">In Stock: {{inStock}}</span>
-            </div>
-            <div>
-            <input type="radio" name="filter" value="false" [(ngModel)]="selectedInput" (change)="changedInput()">
-            <span class="text-red-600">Out of stock: {{outOfStock}}</span>
-            </div>
+<div class="container mx-auto px-4 py-6">
+    <div class="p-6 rounded-lg shadow-lg mb-6">
+        <h2 class="text-2xl font-bold mb-4 text-white">Filter Products</h2>
+        <div class="flex items-center space-x-4">
+            <label class="inline-flex items-center">
+                <input type="radio" class="form-radio text-blue-600" name="stockFilter" value="all" [(ngModel)]="selectedRadio" (change)="changeRadio()">
+                <span class="ml-2 text-white" >All Items</span>
+                <span class="ml-2 text-white">{{allProduct}}</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="radio" class="form-radio " name="stockFilter" value="inStock" [(ngModel)]="selectedRadio" (change)="changeRadio()">
+                <span class="ml-2 text-green-600">In Stock</span>
+                <span class="ml-2 text-white">{{inStock}}</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="radio" class="form-radio " name="stockFilter" value="outOfStock" [(ngModel)]="selectedRadio" (change)="changeRadio()">
+                <span class="ml-2 text-red-600">Out of Stock</span>
+                <span class="ml-2 text-white">{{outOfStock}}</span>
+            </label>
         </div>
     </div>
 </div>

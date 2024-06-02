@@ -1,0 +1,14 @@
+    <div class="bg-white border rounded-lg shadow-lg p-6">
+        <div class="text-center">
+            <h2 class="product-title font-bold text-xl mb-4">{{product.title}}</h2>
+            <p class="product-description text-gray-600 mb-6">{{product.description}}</p>
+            <div class="product-info mt-4">
+                <p class="stock-status mb-2 text-sm text-gray-800"><strong>Stock:</strong> {{product.stock}}</p>
+                <h5 class="price text-blue-600 text-lg mb-4">Price: <strong>{{product.price}}</strong></h5>
+                <div class="flex justify-center space-x-2">
+                    <button class="btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Add to Cart</button>
+                    <button class="btn bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">Favorite</button>
+                </div>
+            </div>
+        </div>
+    </div>
