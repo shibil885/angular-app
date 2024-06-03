@@ -1,3 +1,10 @@
 <label class="text-white">type anything</label>
-<input (input)="changeValue($event)" >
+<input (input)="changeValue($event)">
 <h1 class="text-white ml-10">{{text}}</h1> 
+
+<ng-template #temp>
+    <h1 class="text-white ms-9"> Hellow</h1>
+    <h6 class="text-white ms-9">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus doloribus quam voluptatum? Laudantium</h6>
+</ng-template>
+
+<div *ngTemplateOutlet="temp"></div>

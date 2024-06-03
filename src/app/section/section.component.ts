@@ -2,16 +2,20 @@ import { CommonModule, NgForOf, NgIf } from '@angular/common';
 import { Component,Input } from '@angular/core';
 import { ProductsComponent } from './products/products.component';
 import { FilterComponent } from './filter/filter.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+
+import { Product } from '../models/product';
 import { SearchComponent } from './search/search.component';
 
 @Component({
   selector: 'app-section',
   standalone: true,
-  imports: [NgForOf,NgIf,ProductsComponent,FilterComponent,CommonModule,SearchComponent],
+  imports: [NgForOf,NgIf,ProductsComponent,FilterComponent,CommonModule,SearchComponent,ProductDetailsComponent],
   templateUrl: './section.component.html',
   styleUrl: './section.component.css',
 })
 export class SectionComponent {
+  selectedProduct:Product;
   sportsItems = [
     {
       id: 1,

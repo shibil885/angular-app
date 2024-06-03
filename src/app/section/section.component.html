@@ -1,10 +1,11 @@
-<app-search (eventToSearchText)="getSearchText($event)"></app-search>
+<app-search (eventToSearchText)="getSearchText($event)" ></app-search>
 <app-filter [allProduct]="countOfAll" [inStock]="inStock" [outOfStock]="outOfStock" (radioChangedEvent)="changedSelectedRadio($event)"></app-filter>
 <div class="container mx-auto px-4">
     <div class="flex flex-wrap -mx-4">
         <div *ngFor="let item of sportsItems" class="product-card w-full md:w-1/2 lg:w-1/3 px-4 mb-6">
             <div *ngIf="searchText === '' || item.title.toLocaleLowerCase().includes(searchText)">
-                <app-products [product]="item"></app-products>
+                <app-products [product]="item" (click)="selectedProduct=item" #productComponent></app-products>
+                <product-details *ngIf="selectedProduct"></product-details>
             </div>
         </div>
     </div>

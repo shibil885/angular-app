@@ -5,7 +5,6 @@ import { FooterComponent } from './footer/footer.component';
 import { SectionComponent } from './section/section.component';
 import { Section2Component } from './section-2/section-2.component';
 import { UsersComponent } from './users/users.component';
-import { SearchComponent } from './section/search/search.component';
 
 @Component({
   selector: 'app-root',

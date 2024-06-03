@@ -1,21 +1,16 @@
 import { Component, Input } from '@angular/core';
-import { title } from 'process';
+import{Product} from '../../models/product';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
   @Input()
-  product:{
-    id:number,
-    title:string,
-    description:string,
-    stock:number,
-    price:string
-  }  
+  product: Product;
   
 }
